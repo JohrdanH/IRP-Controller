@@ -24,7 +24,7 @@ To run the Arduino code:
 
 ## Simulink Simulation
 
-The `SimulinkSimulation` directory includes a Simulink model for simulating the behavior of the inverted rotary pendulum with the implemented State Space feedback controller. This simulation provides insights into the system's dynamics and the controller's effectiveness.
+The `Simulation of IRP Control` directory includes a Simulink model for simulating the behavior of the inverted rotary pendulum with the implemented State Space feedback controller. This simulation provides insights into the system's dynamics and the controller's effectiveness.
 
 ### Instructions
 
