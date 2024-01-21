@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="06/09/23||17:24:28" using="Simscape Multibody Link Version 7.0" from="SolidWorks 29.5.1"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="PF_M1_Pendulo_2" uid="PF_M1_Pendulo_2" version="112">
+<AssemblyFile name="PF_M1_Pendulo_2.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="PF_M1_Pendulo-1" uid="PF_M1_Pendulo-1" entityUid="PF_M1_Pendulo" rigid="true">
+<Transform>
+<Rotation>0.9993951379569469 0.0012309998349050689 0.034754033829493727 0 0.99937328925638169 -0.03539814572658638 -0.034775828214654088 0.035376734731841886 0.99876880628686959</Rotation>
+<Translation>0.059963708277416802 0.2070000000000001 -0.0020865496928792263</Translation>
+</Transform>
+<Instance name="PF_M1_Acople-1" uid="PF_M1_Acople-1" grounded="true" entityUid="PF_M1_Acople*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="PF_M1_Barra-1" uid="PF_M1_Barra-1" entityUid="PF_M1_Barra*:*Default">
+<Transform>
+<Rotation>0.11596926282615042 0 0.99325280270410465 0 1 0 -0.99325280270410454 0 0.11596926282615043</Rotation>
+<Translation>0.010499999999999995 -0.080000000000000016 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="PF_M1_Base_Motor-1" uid="PF_M1_Base_Motor-1" grounded="true" entityUid="PF_M1_Base_Motor" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+<Instance name="PF_M1_Base-1" uid="PF_M1_Base-1" grounded="true" entityUid="PF_M1_Base*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="DC Motor-1" uid="DC Motor-1" entityUid="DC Motor*:*Predeterminado">
+<Transform>
+<Rotation>-0.42713318485916901 0 -0.90418872056228572 0 1 0 0.90418872056228572 0 -0.42713318485916901</Rotation>
+<Translation>0 0.036000000000000032 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+<Instance name="PF_M1_Brazo-1" uid="PF_M1_Brazo-1" entityUid="PF_M1_Brazo" rigid="true">
+<Transform>
+<Rotation>0.99939513795694701 0 0.034775828214653998 0 1 0 -0.034775828214653998 0 0.99939513795694701</Rotation>
+<Translation>0.024984878448923702 0.17000000000000004 -0.000869395705366345</Translation>
+</Transform>
+<Instance name="P2-1" uid="P2-1" grounded="true" entityUid="P2*:*Predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="DELTA - ES3-01PG6941 - Incremental Rotary Encoder-1" uid="DELTA - ES3-01PG6941 - Incremental Rotary Encoder-1" entityUid="DELTA - ES3-01PG6941 - Incremental Rotary Encoder*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.012 0.037000000000000005 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Mounting Hub-1" uid="Mounting Hub-1" entityUid="Mounting Hub*:*Default">
+<Transform>
+<Rotation>0 1.0000000000000002 0 0 0 -1 -1.0000000000000002 0 0</Rotation>
+<Translation>-0.024999999999999998 0 0</Translation>
+</Transform>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concéntrica1">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>PF_M1_Base_Motor-1</Uid>
+<Uid>DC Motor-1</Uid>
+</InstancePath>
+<Position>0 0.13400000000000001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>PF_M1_Brazo-1</Uid>
+<Uid>Mounting Hub-1</Uid>
+</InstancePath>
+<Position>0 0 0.009209999999999996</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>PF_M1_Base_Motor-1</Uid>
+<Uid>DC Motor-1</Uid>
+</InstancePath>
+<Position>0 0.13400000000000001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>PF_M1_Brazo-1</Uid>
+<Uid>P2-1</Uid>
+</InstancePath>
+<Position>-0.025000000000000005 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concéntrica2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>PF_M1_Brazo-1</Uid>
+<Uid>DELTA - ES3-01PG6941 - Incremental Rotary Encoder-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>PF_M1_Pendulo-1</Uid>
+<Uid>PF_M1_Acople-1</Uid>
+</InstancePath>
+<Position>0.0049999999999999906 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>PF_M1_Brazo-1</Uid>
+<Uid>DELTA - ES3-01PG6941 - Incremental Rotary Encoder-1</Uid>
+</InstancePath>
+<Position>0.052000000000000011 0 0</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>PF_M1_Pendulo-1</Uid>
+<Uid>PF_M1_Acople-1</Uid>
+</InstancePath>
+<Position>0.0049999999999999906 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="PF_M1_Pendulo" uid="PF_M1_Pendulo" version="110">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="PF_M1_Pendulo.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="PF_M1_Base_Motor" uid="PF_M1_Base_Motor" version="108">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="PF_M1_Base_Motor.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+<Assembly name="PF_M1_Brazo" uid="PF_M1_Brazo" version="128">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<AssemblyFile name="PF_M1_Brazo.SLDASM" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="DC Motor" uid="DC Motor*:*Predeterminado" version="132">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="DC Motor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.0266642658526788</Mass>
+<CenterOfMass>0.00088109325242537889 0.05244905180856458 0</CenterOfMass>
+<Inertia>0.0011491155015274138 0.00021887332848090745 0.0011615362096681452 0 0 3.6170196216499213e-05</Inertia>
+</MassProperties>
+<GeometryFile name="DC Motor_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.20000000000000001" g="0.20000000000000001" b="0.20000000000000001" a="1"/>
+<Diffuse r="0.20000000000000001" g="0.20000000000000001" b="0.20000000000000001" a="1"/>
+<Specular r="0.10000000000000001" g="0.10000000000000001" b="0.10000000000000001" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="DELTA - ES3-01PG6941 - Incremental Rotary Encoder" uid="DELTA - ES3-01PG6941 - Incremental Rotary Encoder*:*Default" version="174">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="DELTA - ES3-01PG6941 - Incremental Rotary Encoder.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.30156521547391824</Mass>
+<CenterOfMass>0.017560566127177015 0.00079193911522218267 3.3545495309661504e-07</CenterOfMass>
+<Inertia>5.6435309511542309e-05 5.8992042441088818e-05 6.6571473383548367e-05 9.6198851146118667e-11 -3.0880568390435693e-09 3.9020811691854537e-06</Inertia>
+</MassProperties>
+<GeometryFile name="DELTA - ES3-01PG6941 - Incremental Rotary Encoder_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.6470588235294118" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.45294117647058824" g="0.43372549019607842" b="0.41176470588235292" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Mounting Hub" uid="Mounting Hub*:*Default" version="205">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Mounting Hub.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.006824018054142106</Mass>
+<CenterOfMass>-0.0003833584935454102 -6.5544513185219771e-09 0.0031476285078386773</CenterOfMass>
+<Inertia>3.0555620600200121e-07 2.8130869220231481e-07 5.2506777111924079e-07 1.0140185649692466e-13 -7.7935818472801026e-10 3.1431817064740412e-13</Inertia>
+</MassProperties>
+<GeometryFile name="Mounting Hub_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="P2" uid="P2*:*Predeterminado" version="144">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="P2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.039966755783157455</Mass>
+<CenterOfMass>0.0044872963407396934 0.012848369420754126 0</CenterOfMass>
+<Inertia>1.6997450150609052e-05 2.4474434248034456e-05 2.7059878220258346e-05 0 0 -6.6744739220854566e-06</Inertia>
+</MassProperties>
+<GeometryFile name="P2_Predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="PF_M1_Acople" uid="PF_M1_Acople*:*Default" version="115">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="PF_M1_Acople.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0056134152790425643</Mass>
+<CenterOfMass>0.0060151248148700744 0 0</CenterOfMass>
+<Inertia>2.000005304941919e-07 1.8183508896148045e-07 1.620862987394346e-07 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="PF_M1_Acople_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.91764705882352937" b="0.92941176470588238" a="1"/>
+<Specular r="0.44901960784313727" g="0.45882352941176469" b="0.46470588235294119" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="PF_M1_Barra" uid="PF_M1_Barra*:*Default" version="110">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="PF_M1_Barra.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.013477432483900207</Mass>
+<CenterOfMass>0 0.044000000000000004 0</CenterOfMass>
+<Inertia>8.7184949178663619e-06 4.2116976512188136e-08 8.7184949178663619e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="PF_M1_Barra_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="PF_M1_Base" uid="PF_M1_Base*:*Default" version="146">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="PF_M1_Base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.0380794265519422</Mass>
+<CenterOfMass>0 0.066549095694925522 0</CenterOfMass>
+<Inertia>0.0046341816412332169 0.0037506794684422453 0.0046341816412332169 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="PF_M1_Base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="1" g="1" b="1" a="1"/>
+<Emissive r="0.29999999999999999" g="0.29999999999999999" b="0.29999999999999999" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
